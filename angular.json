@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "Tablas"
+  "defaultProject": "Tablas",
+  "cli": {
+    "analytics": false
+  }
 }
