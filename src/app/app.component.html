@@ -1,75 +1,56 @@
 <header>
   <h1>Peliculas</h1>
 </header>
-  <div [hidden]="TablaVisible">
-    <table>
-      <tr id="titulos">
-        <th>ID</th>
-        <th>Ttulo</th>
-        <th>Director</th>
-        <th>Actores</th>
-        <th>Fecha</th>
-        <th>Edit</th>
-      </tr>
-      <tr *ngFor="let movie of movies index as i;" id="filas">
-        <td>{{movie.code}}</td>
-        <td>{{movie.title}}</td>
-        <td>{{movie.director}}</td>
-        <td>{{movie.cast}}</td>
-        <td>{{movie.releaseDate}}</td>
-        <td>
-          <button (click)="Edit(i)">Editar</button>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div [hidden]="EditarVisible">
-    <form class="user-form">
-      <div class="field">
-        <label>Codigo:</label>
-        <input type="text" name=code [(ngModel)]="movie.code" >
-      </div>
-      <div class="field">
-        <label>Titulo:</label>
-        <input type="text" name=title [(ngModel)]="movie.title" >
-      </div>
-      <div class="field">
-        <label>Director:</label>
-        <input type="text" name=director [(ngModel)]="movie.director" >
-      </div>
-      <div class="field">
-        <label>Actores:</label>
-        <input type="text" name=cast [(ngModel)]="movie.cast" >
-      </div>
-      <div class="field">
-        <label>Fecha:</label>
-        <input type="date" name=releaseDate [(ngModel)]="movie.releaseDate" >
-      </div>
-      <!-- Modificacion Form + Datos -->
-      <div class="field">
-        <label>Calificacion:</label>
-        <select type="text" name=calificacion [(ngModel)]="movie.calificacion" >
-          <option [value]="item" *ngFor="let item of Calificaciones">{{item}}</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Estado:</label>
-        <label for="1">Vista</label>
-        <input type="radio" id="1" name=Vista value="Vista" [(ngModel)]="movie.Vista" >
-        <label for="2">NoVista</label>
-        <input type="radio" id="2" name=Vista value="NoVista" [(ngModel)]="movie.Vista" >
-        <label for="3">Nunca</label>
-        <input type="radio" id="3" name=Vista value="Nunca" [(ngModel)]="movie.Vista" >
-      </div>
-      <!-- Final Modificacion Form + Datos -->
-    </form>
-    <p class="center">
-    <button (click)="Prev()">Anterior</button>
-    <button (click)="Next()">Siguiente</button>
-    <button (click)="Cambio()">Tabla</button>
-    </p>
-  </div>
-
+<div [hidden]="TablaVisible">
+  <table>
+    <tr id="titulos">
+      <th>ID</th>
+      <th>Ttulo</th>
+      <th>Director</th>
+      <th>Actores</th>
+      <th>Fecha</th>
+      <th>Edit</th>
+    </tr>
+    <tr *ngFor="let movie of movies index as i;" id="filas">
+      <td>{{movie.code}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.cast}}</td>
+      <td>{{movie.releaseDate}}</td>
+      <td>
+        <button (click)="Edit(i)">Editar</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div [hidden]="EditarVisible">
+  <form>
+    <div id="campo">
+      <label>Codigo:</label>
+      <input type="text" name=code [(ngModel)]="movie.code" >
+    </div>
+    <div id="campo">
+      <label>Titulo:</label>
+      <input type="text" name=title [(ngModel)]="movie.title" >
+    </div>
+    <div id="campo">
+      <label>Director:</label>
+      <input type="text" name=director [(ngModel)]="movie.director" >
+    </div>
+    <div id="campo">
+      <label>Actores:</label>
+      <input type="text" name=cast [(ngModel)]="movie.cast" >
+    </div>
+    <div id="campo">
+      <label>Fecha:</label>
+      <input type="text" name=releaseDate [(ngModel)]="movie.releaseDate" >
+    </div>
+  </form>
+  <br>
+  <button (click)="Prev()">Anterior</button>
+  <button (click)="Next()">Siguiente</button>
+  <button (click)="Cambio()">Tabla</button>
+</div>
 <footer>
   <small>Abel Chineesta ©2020, Desarrollo de Interfaces, 2ºDAM</small>
 </footer>

@@ -1,42 +1,27 @@
-p {
-  font-family: Lato;
-}
+table{
+    border-collapse: collapse;
+  }
+  
+  td{
+    border: 1px solid black;
+  }
+  
+  #titulos{
+    text-align: center;
+    font-weight: bold;
+    background-color: darkorchid;
+  }
 
-.user-form {
-  padding: 20px;
-}
+  #filas{
+      background-color: paleturquoise;
+  }
 
-.user-form .field {
-  padding: 4px;
-  margin: 1px;
-  background: #afa;
-}
-.content-input {
-  display: inline-block;
-  width: 80px;
-  margin-left: 5px;
-}
+  #campo{
+    background-color: #00ad03;
+    margin: 1%;
+    padding: 0.5%;
+  }
 
-.user-form .field label {
-  display: inline-block;
-  width: 120px;
-  margin-left: 5px;
-}
-
-.user-form .field input {
-  display: inline-block;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-tr {
-  background-color: rgb(178, 148, 248);
-}
-
-td {
-  background-color: #ffa;
-}
+  form{
+    background-color: darkblue;
+  }
