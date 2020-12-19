@@ -1,0 +1,35 @@
+  p {
+    font-family: Lato;
+  }
+  
+  .user-form {
+    padding: 20px;
+  }
+  
+  .user-form .field {
+    padding: 4px;
+    margin: 1px;
+    background: #afa;
+  }
+
+  .content-input {
+    display: inline-block;
+    width: 20%;
+    margin-left: 5px;
+  }
+  
+  .user-form .field label {
+    display: inline-block;
+    width: 120px;
+    margin-left: 5px;
+  }
+  
+  .user-form .field input {
+    display: inline-block;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

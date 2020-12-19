@@ -2,7 +2,7 @@
   <h1>Peliculas</h1>
 </header>
 
-<app-tabla [hidden]="TablaVisible" (MiVar)="Edit($event) "></app-tabla>
+<app-tabla [hidden]="TablaVisible" [movies]="movies" (MiVar)="Edit($event) "></app-tabla>
 
 <div [hidden]="EditarVisible">
   <form class="user-form">

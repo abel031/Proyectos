@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from '../movie';
 
 @Component({
@@ -7,10 +7,8 @@ import { Movie } from '../movie';
   styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent {
-  
+  @Input() movies:Movie[];
   @Output() MiVar = new EventEmitter();
-
-  movies:Movie[];
 
   Edit(i){
     this.MiVar.emit(i);
