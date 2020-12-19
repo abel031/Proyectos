@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Movie } from './movie';
 
 @Component({
   selector: 'app-root',
@@ -47,4 +46,12 @@ export class AppComponent {
     {code:3,title:'X-Men: Apocalypse',director:'Bryan Singer',cast:'Jennifer Lawrence, Olivia Munn, Oscar Isaac',releaseDate:"2016-05-27"}  
   ]
 
+}
+
+export interface Movie {
+  code:number;  
+  title : string;  
+  director : string;  
+  cast : string;  
+  releaseDate : string;  
 }

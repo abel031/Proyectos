@@ -5,14 +5,12 @@ import localES from '@angular/common/locales/es';
 import { registerLocaleData} from '@angular/common'
 
 import { AppComponent } from './app.component';
-import { TablaComponent } from './tabla/tabla.component';
 
 registerLocaleData(localES,"es");
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TablaComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
