@@ -16,7 +16,7 @@
       <td>{{movie.title}}</td>
       <td>{{movie.director}}</td>
       <td>{{movie.cast}}</td>
-      <td>{{movie.releaseDate}}</td>
+      <td>{{movie.releaseDate | date:"dd/MM/yyyy"}}</td>
       <td>
         <button (click)="Edit(i)">Editar</button>
       </td>
@@ -24,32 +24,33 @@
   </table>
 </div>
 <div [hidden]="EditarVisible">
-  <form>
-    <div id="campo">
+  <form class="user-form">
+    <div class="field">
       <label>Codigo:</label>
-      <input type="text" name=code [(ngModel)]="movie.code" >
+      <input class="content-input" type="text" name=code [(ngModel)]="movie.code" >
     </div>
-    <div id="campo">
+    <div class="field">
       <label>Titulo:</label>
-      <input type="text" name=title [(ngModel)]="movie.title" >
+      <input class="content-input" type="text" name=title [(ngModel)]="movie.title" >
     </div>
-    <div id="campo">
+    <div class="field">
       <label>Director:</label>
-      <input type="text" name=director [(ngModel)]="movie.director" >
+      <input class="content-input" type="text" name=director [(ngModel)]="movie.director" >
     </div>
-    <div id="campo">
+    <div class="field">
       <label>Actores:</label>
-      <input type="text" name=cast [(ngModel)]="movie.cast" >
+      <input class="content-input" type="text" name=cast [(ngModel)]="movie.cast" >
     </div>
-    <div id="campo">
+    <div class="field">
       <label>Fecha:</label>
-      <input type="text" name=releaseDate [(ngModel)]="movie.releaseDate" >
+      <input class="content-input" type="date" name=releaseDate [(ngModel)]="movie.releaseDate" >
     </div>
   </form>
-  <br>
-  <button (click)="Prev()">Anterior</button>
-  <button (click)="Next()">Siguiente</button>
-  <button (click)="Cambio()">Tabla</button>
+  <p class="center">
+    <button (click)="Prev()">Anterior</button>
+    <button (click)="Next()">Siguiente</button>
+    <button (click)="Cambio()">Tabla</button>
+  </p>
 </div>
 <footer>
   <small>Abel Chineesta ©2020, Desarrollo de Interfaces, 2ºDAM</small>
